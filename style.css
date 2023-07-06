@@ -1,0 +1,165 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+/* Mais estilos de reset podem ser adicionados aqui, de acordo com suas necessidades */
+
+:root{
+    --font-principal: 'Roboto Mono', monospace;
+    --bg-color: #FFEADD;
+    --primary-color: #FF6666;
+    --some-e-aparece: none;
+}
+
+body {
+    line-height: 1;
+    font-family: var(--font-principal);
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* ----------------------------------------- */
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+
+    min-height: 100vh;
+    gap: 20px;
+}
+
+@keyframes animaçao {
+    0% {color:var(--primary-color) ; -webkit-text-stroke: 2px var(--bg-color) ;}
+    50% {color: var(--bg-color); -webkit-text-stroke: 2px var(--primary-color);}
+    100% {color:var(--primary-color) ; -webkit-text-stroke: 2px var(--bg-color);}
+    
+}
+
+.win{
+    -webkit-text-stroke:2px black;
+    animation: animaçao;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+h1{
+    font-size: 4em;
+    font-weight: 700;
+    animation-name: animaçao;
+}
+
+h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.mensagem{
+    font-size: 1.5em;  
+}
+
+.box{
+    display: inline-block;
+    border: solid 3px var(--primary-color);
+    box-shadow: 10px 10px #cfc3c3;
+    padding: 5px 30px;
+    margin: 20px;
+    font-size: 3em;
+}
+
+.buttonMic{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    color: var(--primary-color);
+    border:solid 2px var(--primary-color);
+    border-radius: 8px 5px;
+    box-shadow: 6px 6px #cfc3c3;
+}
+
+.buttonMic:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 1320px;
+    margin-bottom: 8px;
+
+}
+
+.buttonInfo{
+    display: flex;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border:solid 2px var(--primary-color);
+    border-radius: 8px 5px;
+    box-shadow: 6px 6px #cfc3c3;
+}
+
+.buttonInfo:hover{
+    cursor: pointer;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+@keyframes aparecer {
+    0% { background-color: #FF6666; color: var(--bg-color)}
+    50% { background-color: #FF6666; color: var(--bg-color)}
+    100% { background-color: #FF6666; color: var(--bg-color)}
+}
+.someP{
+    --some-e-aparece: block;
+}
+
+footer p{
+    display: var(--some-e-aparece);
+    position: relative;
+    right: 175px;
+    border: solid 2px var(--primary-color);
+    padding: 5px;
+    border-radius: 20px 20px 5px 20px;
+}
