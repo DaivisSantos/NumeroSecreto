@@ -23,9 +23,60 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 :root{
     --font-principal: 'Roboto Mono', monospace;
-    --bg-color: #FFEADD;
-    --primary-color: #FF6666;
+    --bg-color: ;
+    --primary-color: ;
     --some-e-aparece: none;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    margin: 10px 15px 0 0 ;
+    right: 0;
+}
+
+header button{
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border:solid 2px var(--primary-color);
+    border-radius: 8px 5px;
+    box-shadow: 6px 6px gray;
+}
+
+header button:hover{
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.cor1{
+    background-color: black;
+    color: white;
+    border-color: white;
+    border: white;
+    
+}
+
+.cor2{
+    background-color: #C2DEDC;
+    color: #116A7B;
+    border-color: #116A7B;
+    border:#116A7B;
+
+}
+
+.cor3{
+    background-color: #E4A5FF;
+    color: #ffffff;
+    border-color: #ffffff;
+    border: #ffffff;
 }
 
 body {
@@ -55,6 +106,7 @@ body{
 
     min-height: 100vh;
     gap: 20px;
+    transition: 2s;
 }
 
 @keyframes animaçao {
@@ -89,7 +141,7 @@ h3{
 .box{
     display: inline-block;
     border: solid 3px var(--primary-color);
-    box-shadow: 10px 10px #cfc3c3;
+    box-shadow: 10px 10px gray;
     padding: 5px 30px;
     margin: 20px;
     font-size: 3em;
@@ -107,7 +159,7 @@ h3{
     color: var(--primary-color);
     border:solid 2px var(--primary-color);
     border-radius: 8px 5px;
-    box-shadow: 6px 6px #cfc3c3;
+    box-shadow: 6px 6px gray;
 }
 
 .buttonMic:hover{
@@ -119,8 +171,8 @@ h3{
 footer{
     position: fixed;
     bottom: 0;
-    left: 1320px;
-    margin-bottom: 8px;
+    margin: 0 18px 10px 0;
+    right: 0;;
 
 }
 
@@ -137,7 +189,7 @@ footer{
     color: var(--bg-color);
     border:solid 2px var(--primary-color);
     border-radius: 8px 5px;
-    box-shadow: 6px 6px #cfc3c3;
+    box-shadow: 6px 6px gray;
 }
 
 .buttonInfo:hover{
@@ -147,9 +199,9 @@ footer{
 }
 
 @keyframes aparecer {
-    0% { background-color: #FF6666; color: var(--bg-color)}
-    50% { background-color: #FF6666; color: var(--bg-color)}
-    100% { background-color: #FF6666; color: var(--bg-color)}
+    0% { background-color: var(--primary-color); color: var(--bg-color)}
+    50% { background-color: var(--primary-color); color: var(--bg-color)}
+    100% { background-color: var(--primary-color); color: var(--bg-color)}
 }
 .someP{
     --some-e-aparece: block;
@@ -162,4 +214,55 @@ footer p{
     border: solid 2px var(--primary-color);
     padding: 5px;
     border-radius: 20px 20px 5px 20px;
+}
+
+.botao-win{
+    background-color: transparent;
+    color: var(--primary-color);
+    border:solid 2px var(--primary-color);
+    border-radius: 8px 5px;
+    box-shadow: 6px 6px gray;
+}
+
+.botao-win:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    body{
+        padding: 10px;
+    }
+    h1{
+        font-size: 3em;
+    }
+
+    h3{
+        font-size: 1.6em;
+    }
+
+    .box{
+        width: auto;
+    }
+
+    .mensagem_resposta{
+        font-size: 1em;
+    }
+
+    .win{
+        font-size: 5em;
+    }
+
+    .win-texto{
+        font-size: 1.5em;
+    }
+    
+    .botao-win{
+        font-size: 1em;
+        width: auto;
+    }
+
+    header button{
+        margin-left: 10px;
+    }
 }

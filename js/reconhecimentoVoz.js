@@ -10,6 +10,7 @@ const recognition = new SpeechRecognition()
 recognition.lang = 'pt-Br'
 botao.addEventListener('click', () => {
   recognition.start();
+  botao.disabled = true;
 });
 
 

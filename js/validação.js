@@ -14,8 +14,10 @@ function verificacao (chute){
 
     if (numero === NumeroSecreto) {
         elementoChute.parentNode.innerHTML = `
-        <h1 class="win">WIN</h1>
-        <div class="win">O numero secreto era: ${NumeroSecreto}</div>
+        <h2 class="win">WIN</h1>
+        <div class="win-texto">O numero secreto era: ${NumeroSecreto}</div>
+        
+        <button id="botaowin" class="botao-win">Jogar Novamente</button>
         `
         
     } else if (numero < NumeroSecreto) {
@@ -35,3 +37,9 @@ function chuteInvalido(numero) {
     function maiorPermitido(numero) {
         return numero > maiorValor || numero < menorValor
 }
+
+document.body.addEventListener('click', (e) => {
+    if (e.target.id == 'botaowin'){
+        window.location.reload()
+    }
+})
