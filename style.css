@@ -177,14 +177,15 @@ footer{
 }
 
 .buttonInfo{
-    display: flex;
+    display: inline-flex;
     bottom: 0;
     width: 25px;
     height: 25px;
     font-size: 1.2em;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: flex-end;
+    
     background-color: var(--primary-color);
     color: var(--bg-color);
     border:solid 2px var(--primary-color);
@@ -204,13 +205,13 @@ footer{
     100% { background-color: var(--primary-color); color: var(--bg-color)}
 }
 .someP{
-    --some-e-aparece: block;
+    --some-e-aparece: inline-block;
 }
 
 footer p{
     display: var(--some-e-aparece);
     position: relative;
-    right: 175px;
+    right: 0px;
     border: solid 2px var(--primary-color);
     padding: 5px;
     border-radius: 20px 20px 5px 20px;
